@@ -15,15 +15,37 @@ this module is going to create following resouces.
 * Association between private subnets and private route table
 * Association between database subnets and database route table
 
+#### Name Format
+**for subnets:**[Project_name]-public/private/database-1a/1b <br/>
+
+**for routetables:**[Project_name]-public/private/database <br/>
+
 ### Arguments
 
 **Project_name** (Required) - User must provide his project name <br/>
+
 **vpc_cidr** (Optional) - Default value is 10.0.0.0/16 <br/>
+
 **vpc_tags** (Optional) - User can provide tags, other wise empty <br/>
+
 **public_subnet_cidr** (Required) - user must provide 2 valid subnet CIDR <br/>
-**public_subnet_names** (Required) - user must provide 2 valid subnets names <br/>
-**public_subnet_cidr** (Required) - user must provide 2 valid subnet CIDR <br/>
-**public_subnet_names** (Required) - user must provide 2 valid subnets names <br/>
+
+**public_subnet_tags** (Optional) - User can provide tags, other wise empty <br/>
+
+**private_subnet_cidr** (Required) - user must provide 2 valid subnet CIDR <br/>
+
+**private_subnet_tags** (Optional) - User can provide tags, other wise empty <br/>
+
+**database_subnet_cidr** (Required) - user must provide 2 valid subnet CIDR <br/>
+
+**database_subnet_tags** (Optional) - User can provide tags, other wise empty <br/>
+
 **public_route_table_tags** (Optional) - User can provide tags, other wise empty <br/>
+
 **private_route_table_tags** (Optional) - User can provide tags, other wise empty <br/>
 
+**database_route_table_tags** (Optional) - User can provide tags, other wise empty <br/>
+
+### Outputs
+
+**vpc_id** - this is the ID for vpc created
